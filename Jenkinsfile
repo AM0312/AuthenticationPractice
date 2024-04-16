@@ -17,10 +17,5 @@ pipeline {
 				}
 			}
 		}
-		stage('Deploy') {
-			steps {
-				// Add deployment steps here (e.g., Kubernetes deployment)
-			}
-		}
 	}
 }
