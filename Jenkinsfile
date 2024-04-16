@@ -4,15 +4,15 @@ pipeline {
 		stage('Build Docker Image') {
 			steps {
 				script {
-					docker.build('authpractice')
+					docker.build('shouryade/authpractice')
 				}
 			}
 		}
 		stage('Push Docker Image') {
 			steps {
 				script {
-					docker.withRegistry('<registry-url>', '<credentials-id>') {
-						docker.image('authpractice').push()
+					docker.withRegistry('registry.hub.docker.com/shouryade', 'dckr_pat_3l-82uUDzeMxVmRXv_bOsqBcR-M') {
+						docker.image('shouryade/authpractice').push()
 					}
 				}
 			}
