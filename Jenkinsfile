@@ -4,15 +4,15 @@ pipeline {
 		stage('Build Docker Image') {
 			steps {
 				script {
-					docker.build('shouryade/authpractice')
+					docker.build('authpractice')
 				}
 			}
 		}
 		stage('Push Docker Image') {
 			steps {
-				script {
-					docker.withRegistry('registry.hub.docker.com/shouryade', 'dckr_pat_3l-82uUDzeMxVmRXv_bOsqBcR-M') { // ps:already revoked haha suckers
-						docker.image('shouryade/authpractice').push()
+				script {d
+					docker.withRegistry('https://registry.hub.docker.com/', 'am0312') { // ps:already revoked haha suckers
+						docker.image('authpractice').push()
 					}
 				}
 			}
