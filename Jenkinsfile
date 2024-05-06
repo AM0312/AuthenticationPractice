@@ -4,15 +4,15 @@ pipeline {
 		stage('Build Docker Image') {
 			steps {
 				script {
-					docker.build('authpractice')
+					docker.build('AM0312/authpractice')
 				}
 			}
 		}
 		stage('Push Docker Image') {
 			steps {
-				script {d
+				script {
 					docker.withRegistry('https://registry.hub.docker.com/', 'am0312') { // ps:already revoked haha suckers
-						docker.image('authpractice').push()
+						docker.image('AM0312/authpractice').push()
 					}
 				}
 			}
