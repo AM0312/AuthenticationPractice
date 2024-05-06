@@ -1,0 +1,17 @@
+{
+    "database": {
+      "host": "${DATABASE_HOST}",
+      "port": ${process.env.DATABASE_PORT},
+      "username": "${DATABASE_USERNAME}",
+      "password": "${DATABASE_PASSWORD}",
+      "database_name": "${DATABASE_NAME}"
+    },
+    "api": {
+      "baseUrl": "${API_BASE_URL}",
+      "apiKey": "${API_KEY}"
+    },
+    "logging": {
+      "level": "${LOGGING_LEVEL}",
+      "file": "${LOG_FILE}"
+    }
+}

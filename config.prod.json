@@ -1,0 +1,17 @@
+{
+    "database": {
+      "host": "${PROD_DATABASE_HOST}",
+      "port": ${PROD_DATABASE_PORT},
+      "username": "${PROD_DATABASE_USERNAME}",
+      "password": "${PROD_DATABASE_PASSWORD}",
+      "database_name": "${PROD_DATABASE_NAME}"
+    },
+    "api": {
+      "baseUrl": "${PROD_API_BASE_URL}",
+      "apiKey": "${PROD_API_KEY}"
+    },
+    "logging": {
+      "level": "${PROD_LOGGING_LEVEL}",
+      "file": "${PROD_LOG_FILE}"
+    }
+}
